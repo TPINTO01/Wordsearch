@@ -1,0 +1,30 @@
+WordFinder - locates words in text file(s).
+
+A word is a whitespace-separated pattern, WordFinder locates and prints each
+line in input_files where pattern is found.
+
+    To compile and link, run;    
+        make WordFinder
+            -WordFinder should now be executable in local directory
+
+    usage : ./WordFinder input_file1 inputfile2 ...
+
+Opens and reads each input_file, waits for word searches from standard
+input, prints lines to standnard output.
+
+I will use my hash table template class Hash to hold word-line 
+pairs. Best-Case constant time access to first instance of a 
+word.
+
+Since my hash table utilizes linked-list chaining, Worst-case
+O(n) time access to elements, where n is number of entries in
+the table. This is unlikely, dependent on hash function.
+
+Load factor of n/k, where n is number of words and k is number of
+buckets. I use a big, prime k in WordFinder (15487469) 
+
+This is not an implementation of grep, which uses pattern matching with on
+newline-separated patterns. I wanted to use my hash table from the 
+beginning, which would have been inefficient for newline-separated patterns.
+WordFinder will not find a pattern within a word, it indexes only whole
+words, again unlike grep.
