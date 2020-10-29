@@ -10,7 +10,7 @@ line in input_files where pattern is found.
     usage : ./WordFinder input_file1 inputfile2 ...
 
 Opens and reads each input_file, waits for word searches from standard
-input, prints lines to standnard output.
+input, prints lines to standard output.
 
 I will use my hash table template class Hash to hold word-line 
 pairs. Best-Case constant time access to first instance of a 
